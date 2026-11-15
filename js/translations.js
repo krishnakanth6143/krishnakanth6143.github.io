@@ -182,50 +182,109 @@ const translations = {
     }
 };
 
-// Function to apply translations based on selected language
+// Additional interface copy for the refreshed layout.
+Object.assign(translations.en, {
+    'skip-link': 'Skip to content',
+    'hero-intro': "HELLO, I'M KRISHNAKANTH S",
+    'hero-heading1': 'Thoughtful code.',
+    'hero-heading2': 'Meaningful impact.',
+    'hero-description': 'Turning ideas into useful digital experiences. I build with Java, create for the web, and care about the details that make a difference.',
+    'find-me': 'FIND ME ON',
+    'craft-title': 'Made with curiosity.',
+    'craft-description': 'A little better, every day.',
+    'scroll-explore': 'SCROLL TO EXPLORE',
+    'hero-note': 'Code. Create. Keep learning.',
+    'stack-label': 'MY EVERYDAY TOOLKIT',
+    'about-eyebrow': 'THE PERSON BEHIND THE CODE',
+    'about-caption': 'A developer with curiosity at the core.',
+    'skills-eyebrow': 'WHAT I WORK WITH',
+    'skills-caption': 'A practical toolkit. A problem-solving mindset.',
+    'projects-eyebrow': 'SELECTED WORK',
+    'projects-caption': 'Ideas brought to life, one project at a time.',
+    'project-discuss': 'Discuss this project',
+    'education-eyebrow': 'LEARNING & GROWTH',
+    'education-caption': 'The foundations behind my work.',
+    'contact-eyebrow': "LET'S CONNECT",
+    'contact-caption': "Have an idea? Let's build something together.",
+    'contact-heading': 'Good things start with a conversation.',
+    'contact-description': "Whether it's a project, an opportunity, or just a hello — I'd love to hear from you.",
+    'back-top': 'Back to top',
+    'menu-open': 'Open menu',
+    'menu-close': 'Close menu',
+    'theme-light': 'Switch to light theme',
+    'theme-dark': 'Switch to dark theme'
+});
+Object.assign(translations.ja, {
+    'skip-link': '本文へスキップ',
+    'hero-intro': 'こんにちは、KRISHNAKANTH S です',
+    'hero-heading1': '丁寧なコードで。',
+    'hero-heading2': '確かな価値を。',
+    'hero-description': 'アイデアを、役立つデジタル体験へ。Java とウェブ技術を使い、小さな細部まで大切にしながら開発しています。',
+    'find-me': 'ソーシャル',
+    'craft-title': '好奇心を原動力に。',
+    'craft-description': '毎日、少しずつ前へ。',
+    'scroll-explore': 'スクロールして見る',
+    'hero-note': 'コードを書く。創る。学び続ける。',
+    'stack-label': '日々使う技術',
+    'about-eyebrow': 'コードの向こう側',
+    'about-caption': '好奇心を大切にする開発者です。',
+    'skills-eyebrow': '使っている技術',
+    'skills-caption': '実践的な技術と、課題解決の姿勢。',
+    'projects-eyebrow': '制作したもの',
+    'projects-caption': 'アイデアを一つずつ形に。',
+    'project-discuss': 'このプロジェクトについて相談',
+    'education-eyebrow': '学びと成長',
+    'education-caption': '開発を支える学びの土台。',
+    'contact-eyebrow': 'つながりましょう',
+    'contact-caption': 'アイデアを、一緒に形にしませんか。',
+    'contact-heading': '良いものづくりは、会話から。',
+    'contact-description': 'プロジェクトや仕事のご相談、ちょっとしたご挨拶も。お気軽にご連絡ください。',
+    'back-top': 'トップへ戻る',
+    'menu-open': 'メニューを開く',
+    'menu-close': 'メニューを閉じる',
+    'theme-light': 'ライトテーマに切り替え',
+    'theme-dark': 'ダークテーマに切り替え'
+});
+Object.assign(translations.ta, {
+    'skip-link': 'உள்ளடக்கத்திற்குச் செல்லவும்',
+    'hero-intro': 'வணக்கம், நான் KRISHNAKANTH S',
+    'hero-heading1': 'சிந்தனையுடன் நிரல்.',
+    'hero-heading2': 'அர்த்தமுள்ள தாக்கம்.',
+    'hero-description': 'யோசனைகளைப் பயனுள்ள டிஜிட்டல் அனுபவங்களாக மாற்றுகிறேன். Java மற்றும் இணையத் தொழில்நுட்பங்களைக் கொண்டு, ஒவ்வொரு நுணுக்கத்திலும் கவனம் செலுத்தி உருவாக்குகிறேன்.',
+    'find-me': 'என்னைத் தொடர',
+    'craft-title': 'ஆர்வத்துடன் உருவாக்கம்.',
+    'craft-description': 'ஒவ்வொரு நாளும் சிறு முன்னேற்றம்.',
+    'scroll-explore': 'கீழே சென்று பார்க்கவும்',
+    'hero-note': 'நிரலாக்கம். உருவாக்கம். தொடர் கற்றல்.',
+    'stack-label': 'அன்றாடத் தொழில்நுட்பங்கள்',
+    'about-eyebrow': 'நிரலுக்குப் பின்னால்',
+    'about-caption': 'ஆர்வத்தை அடிப்படையாகக் கொண்ட நிரலாளர்.',
+    'skills-eyebrow': 'எனது தொழில்நுட்பங்கள்',
+    'skills-caption': 'நடைமுறைத் திறன்களும் சிக்கல் தீர்க்கும் சிந்தனையும்.',
+    'projects-eyebrow': 'தேர்ந்தெடுத்த படைப்புகள்',
+    'projects-caption': 'ஒவ்வொரு திட்டத்திலும் உயிர் பெறும் யோசனைகள்.',
+    'project-discuss': 'இந்தத் திட்டம் பற்றிப் பேசலாம்',
+    'education-eyebrow': 'கற்றலும் வளர்ச்சியும்',
+    'education-caption': 'என் பணிக்கான அடித்தளங்கள்.',
+    'contact-eyebrow': 'தொடர்பில் இருப்போம்',
+    'contact-caption': 'ஒரு யோசனை உள்ளதா? இணைந்து உருவாக்குவோம்.',
+    'contact-heading': 'நல்ல தொடக்கம் ஒரு உரையாடலில்.',
+    'contact-description': 'திட்டம், வாய்ப்பு அல்லது ஒரு வணக்கம் — உங்களிடமிருந்து கேட்க ஆவலாக உள்ளேன்.',
+    'back-top': 'மேலே செல்லவும்',
+    'menu-open': 'பட்டியலைத் திறக்கவும்',
+    'menu-close': 'பட்டியலை மூடவும்',
+    'theme-light': 'வெளிர் தோற்றத்திற்கு மாற்றவும்',
+    'theme-dark': 'இருண்ட தோற்றத்திற்கு மாற்றவும்'
+});
+
+// Apply text without replacing nested icons or other interactive content.
 function applyTranslations(language) {
-    if (!translations[language]) {
-        console.error(`Translations for ${language} not found`);
-        return;
-    }
-    
-    // Get all elements with data-translate attribute
-    const elements = document.querySelectorAll('[data-translate]');
-    
-    elements.forEach(element => {
-        const translationKey = element.getAttribute('data-translate');
-        if (translations[language][translationKey]) {
-            // Special handling for input placeholders or element content
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translations[language][translationKey];
-            } else {
-                element.textContent = translations[language][translationKey];
-            }
-        }
-    });
-    
-    // Update data-text attribute for glitch effect
-    const glitchElements = document.querySelectorAll('.glitch');
-    glitchElements.forEach(element => {
-        element.setAttribute('data-text', element.textContent);
+    const dictionary = translations[language];
+    if (!dictionary) return;
+    document.documentElement.lang = language;
+    document.querySelectorAll('[data-translate]').forEach((element) => {
+        const key = element.dataset.translate;
+        const text = dictionary[key] || translations.en[key];
+        if (text) element.textContent = text;
     });
 }
-
-// Initialize translations when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Apply initial translations based on saved preference or default to English
-    const savedLanguage = localStorage.getItem('language') || 'en';
-    applyTranslations(savedLanguage);
-    
-    // Add event listeners to language selector buttons
-    const languageButtons = document.querySelectorAll('.language-selector button');
-    languageButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            languageButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            localStorage.setItem('language', lang);
-            applyTranslations(lang);
-        });
-    });
-});
