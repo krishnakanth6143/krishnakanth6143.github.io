@@ -1,65 +1,83 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishnakanth S - Portfolio</title>
+    <title>Krishnakanth S &mdash; Java & Web Developer</title>
+    <meta name="description" content="Krishnakanth S, a Java and web developer building thoughtful applications with Java, MySQL, and modern web technologies. Explore my work, skills, and background.">
+    <meta name="theme-color" content="#f8f9f5">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="light-mode">
-    <div class="language-selector language-top">
-        <button data-lang="en" class="active">English</button>
-        <button data-lang="ja">日本語</button>
-        <button data-lang="ta">தமிழ்</button>
-    </div>
-    
-    <div class="theme-switch">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-    </div>
-
+    <a href="#main-content" class="skip-link" data-translate="skip-link">Skip to content</a>
     <header>
-        <nav>
-            <div class="logo">
-                <span>K</span>rishnakant<span>h</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" data-translate="nav-home">Home</a></li>
+        <nav aria-label="Main navigation" class="container">
+            <a class="logo" href="#home" aria-label="Krishnakanth, home"><span class="logo-mark">k<span>.</span></span><span class="logo-name">krishnakanth<span class="logo-period">.</span></span></a>
+            <ul class="nav-links" id="navigation">
+                <li><a href="#home" class="active" aria-current="location" data-translate="nav-home">Home</a></li>
                 <li><a href="#about" data-translate="nav-about">About</a></li>
                 <li><a href="#skills" data-translate="nav-skills">Skills</a></li>
-                <li><a href="#education" data-translate="nav-education">Education</a></li>
                 <li><a href="#projects" data-translate="nav-projects">Projects</a></li>
+                <li><a href="#education" data-translate="nav-education">Education</a></li>
                 <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="nav-controls">
+                <div class="language-selector" role="group" aria-label="Language">
+                    <button type="button" data-lang="en" class="active" aria-pressed="true" aria-label="English">EN</button>
+                    <button type="button" data-lang="ja" aria-pressed="false" aria-label="&#26085;&#26412;&#35486;" lang="ja">&#26085;</button>
+                    <button type="button" data-lang="ta" aria-pressed="false" aria-label="&#2980;&#2990;&#3007;&#2996;&#3021;" lang="ta">&#2980;</button>
+                </div>
+                <button type="button" class="theme-switch icon-button" aria-label="Switch to dark theme" aria-pressed="false"><i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i></button>
+                <button type="button" class="burger icon-button" aria-label="Open menu" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="glitch" data-text="KRISHNAKANTH S">KRISHNAKANTH S</h1>
-                <p class="typewriter" data-translate="hero-subtitle">Java Developer | Web Developer</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn primary-btn" data-translate="hero-contact">Contact Me</a>
-                    <a href="#projects" class="btn secondary-btn" data-translate="hero-projects">View Projects</a>
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <div class="eyebrow"><span class="status-dot"></span><span data-translate="hero-intro">HELLO, I'M KRISHNAKANTH S</span></div>
+                    <h1><span data-translate="hero-heading1">Thoughtful code.</span><br><span class="text-accent" data-translate="hero-heading2">Meaningful impact.</span></h1>
+                    <p class="hero-role"><span class="role-line"></span><span data-translate="hero-subtitle">Java Developer | Web Developer</span></p>
+                    <p class="hero-description" data-translate="hero-description">Turning ideas into useful digital experiences. I build with Java, create for the web, and care about the details that make a difference.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary-btn"><span data-translate="hero-projects">View Projects</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="#contact" class="btn secondary-btn"><span data-translate="hero-contact">Contact Me</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="hero-socials"><span data-translate="find-me">FIND ME ON</span><a href="https://github.com/krishnakanth6143" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/krishnakanth-sethuraman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a><span class="social-divider"></span><span class="hero-location"><i class="fas fa-location-dot" aria-hidden="true"></i> Salem, India</span></div>
+                </div>
+                <div class="hero-visual" role="img" aria-label="Code illustration: a developer profile">
+                    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+                    <span class="floating-symbol symbol-one" aria-hidden="true">{ }</span><span class="floating-symbol symbol-two" aria-hidden="true">&lt;/&gt;</span>
+                    <div class="code-window">
+                        <div class="window-bar"><span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span><span>Developer.java</span><i class="fas fa-code" aria-hidden="true"></i></div>
+                        <div class="code-content"><div class="code-line"><span class="line-number">01</span><code><span class="code-muted">// A little about me</span></code></div>
+                        <div class="code-line"><span class="line-number">02</span><code><span class="code-purple">public class</span> <span class="code-yellow">Developer</span> {</code></div>
+                        <div class="code-line"><span class="line-number">03</span><code>  <span class="code-purple">String</span> name = <span class="code-green">"Krishnakanth"</span>;</code></div>
+                        <div class="code-line"><span class="line-number">04</span><code>  <span class="code-purple">String</span> focus = <span class="code-green">"Java & Web"</span>;</code></div>
+                        <div class="code-line"><span class="line-number">05</span><code>  <span class="code-purple">String[]</span> toolkit = {</code></div>
+                        <div class="code-line"><span class="line-number">06</span><code>    <span class="code-green">"Java"</span>, <span class="code-green">"MySQL"</span>, <span class="code-green">"Web"</span></code></div>
+                        <div class="code-line"><span class="line-number">07</span><code>  };</code></div>
+                        <div class="code-line"><span class="line-number">08</span><code> </code></div>
+                        <div class="code-line"><span class="line-number">09</span><code>  <span class="code-purple">boolean</span> alwaysLearning = <span class="code-orange">true</span>;</code></div>
+                        <div class="code-line"><span class="line-number">10</span><code>}</code></div></div>
+                        <div class="window-status"><span><span class="status-dot"></span> Building with purpose</span><span>Java <i class="fas fa-check" aria-hidden="true"></i></span></div>
+                    </div>
+                    <div class="craft-badge"><span class="craft-icon"><i class="fas fa-code" aria-hidden="true"></i></span><div><strong data-translate="craft-title">Made with curiosity.</strong><span data-translate="craft-description">A little better, every day.</span></div><span class="badge-spark" aria-hidden="true">&#10022;</span></div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="shape"></div>
-                <!-- Add your profile image or an abstract representation -->
-                <div class="profile-outline"></div>
-            </div>
+            <div class="container hero-bottom"><a href="#about"><span class="scroll-icon" aria-hidden="true"></span><span data-translate="scroll-explore">SCROLL TO EXPLORE</span><i class="fas fa-arrow-down" aria-hidden="true"></i></a><span class="hero-note" data-translate="hero-note">Code. Create. Keep learning.</span></div>
         </section>
+        <div class="stack-strip"><div class="container"><span data-translate="stack-label">MY EVERYDAY TOOLKIT</span><div><span><i class="fab fa-java" aria-hidden="true"></i> Java</span><span><i class="fas fa-database" aria-hidden="true"></i> MySQL</span><span><i class="fab fa-html5" aria-hidden="true"></i> HTML & CSS</span><span><i class="fab fa-js" aria-hidden="true"></i> JavaScript</span><span><i class="fab fa-salesforce" aria-hidden="true"></i> Salesforce</span><span><i class="fab fa-android" aria-hidden="true"></i> Android Studio</span></div></div></div>
 
-        <section id="about" class="about">
-            <h2 class="section-title" data-translate="about-title">About Me</h2>
+        <section id="about" class="about section-space"><div class="container">
+            <div class="section-eyebrow"><span>01 /</span> <span data-translate="about-eyebrow">THE PERSON BEHIND THE CODE</span></div>
+            <div class="section-heading"><h2 class="section-title" data-translate="about-title">About Me</h2><p data-translate="about-caption">A developer with curiosity at the core.</p></div>
             <div class="about-content">
                 <div class="about-text">
                     <p data-translate="about-description">Detail-oriented and highly motivated Java developer with a strong foundation in software development principles and object-oriented programming. Proficient in Java, with hands-on experience in developing and testing applications. Eager to contribute to team success through hard work, attention to detail, and excellent organizational skills.</p>
@@ -90,10 +108,12 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
 
-        <section id="skills" class="skills">
-            <h2 class="section-title" data-translate="skills-title">Technical Skills</h2>
+        <section id="skills" class="skills section-space"><div class="container">
+            <div class="section-eyebrow"><span>02 /</span> <span data-translate="skills-eyebrow">WHAT I WORK WITH</span></div>
+            <div class="section-heading"><h2 class="section-title" data-translate="skills-title">Technical Skills</h2><p data-translate="skills-caption">A practical toolkit. A problem-solving mindset.</p></div>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3 data-translate="skills-programming">Programming</h3>
@@ -148,10 +168,89 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
 
-        <section id="education" class="education">
-            <h2 class="section-title" data-translate="education-title">Education & Certifications</h2>
+        <section id="projects" class="projects section-space"><div class="container">
+            <div class="section-eyebrow"><span>03 /</span> <span data-translate="projects-eyebrow">SELECTED WORK</span></div>
+            <div class="section-heading"><h2 class="section-title" data-translate="projects-title">Projects</h2><p data-translate="projects-caption">Ideas brought to life, one project at a time.</p></div>
+            <div class="projects-container">
+                <article class="project-card">
+                    <div class="project-art art-education" aria-hidden="true"><span class="art-index">01 / EDUCATION</span><div class="edu-illustration"><div class="book-page"><i class="fas fa-book-open"></i><span></span><span></span><span></span></div><span class="education-orbit">a<span>+</span></span><span class="small-spark">&#10022;</span></div><span class="art-caption">Learning without limits.</span></div>
+                    <div class="project-header">
+                        <h3 data-translate="project1-title">Enhancing the Education Ecosystem for Specially Abled Students</h3>
+                    </div>
+                    <div class="project-body">
+                        <p data-translate="project1-desc">A project focused on creating accessible education solutions for students with special needs.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Accessibility</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link"><span data-translate="project-discuss">Discuss this project</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-art art-data" aria-hidden="true"><span class="art-index">02 / DATA</span><div class="data-illustration"><div class="data-title"><i class="fas fa-database"></i><span>clean_data.sql</span><span class="data-check">&#10003;</span></div><div class="data-row"><span>id</span><span>name</span><span>status</span></div><div class="data-row"><span>001</span><span>Clean data</span><span class="data-valid">&#10003;</span></div><div class="data-row"><span>002</span><span>Better insights</span><span class="data-valid">&#10003;</span></div><div class="data-row"><span>003</span><span>Less noise</span><span class="data-valid">&#10003;</span></div></div><span class="art-caption">Making sense of the details.</span></div>
+                    <div class="project-header">
+                        <h3 data-translate="project2-title">Clean Data in SQL using MySQL Workbench</h3>
+                    </div>
+                    <div class="project-body">
+                        <p data-translate="project2-desc">A Coursera project focused on data cleaning and management techniques using MySQL.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Data Cleaning</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link"><span data-translate="project-discuss">Discuss this project</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-art art-health" aria-hidden="true"><span class="art-index">03 / HEALTHTECH</span><div class="health-illustration"><div class="health-cross">+</div><svg viewBox="0 0 260 80" fill="none"><path d="M0 45H65L80 30L95 57L115 8L136 72L153 32L167 45H260" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>AI &times; Healthcare</span></div><span class="art-caption">Technology with a human purpose.</span></div>
+                    <div class="project-header">
+                        <h3 data-translate="project3-title">AI-Driven Chronic Kidney Disease Prediction System</h3>
+                    </div>
+                    <div class="project-body">
+                        <p data-translate="project3-desc">An AI system that predicts chronic kidney disease and provides virtual doctor consultation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">HealthTech</span>
+                            <span class="tech-tag">Java</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link"><span data-translate="project-discuss">Discuss this project</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-art art-chat" aria-hidden="true"><span class="art-index">04 / ANDROID</span><div class="chat-illustration"><div class="chat-bubble bubble-one"><span class="chat-avatar">k.</span><span>Hello, world! <span class="chat-wave">&#10022;</span></span></div><div class="chat-bubble bubble-two"><span>Let's connect.</span><span class="chat-ticks">&#10003;&#10003;</span></div><div class="chat-typing"><span></span><span></span><span></span></div></div><span class="art-caption">A conversation, just a tap away.</span></div>
+                    <div class="project-header">
+                        <h3 data-translate="project4-title">Chat Application</h3>
+                    </div>
+                    <div class="project-body">
+                        <p data-translate="project4-desc">A real-time chat application developed using Android Studio.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Real-time</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link"><span data-translate="project-discuss">Discuss this project</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        </section>
+
+        <section id="education" class="education section-space"><div class="container">
+            <div class="section-eyebrow"><span>04 /</span> <span data-translate="education-eyebrow">LEARNING & GROWTH</span></div>
+            <div class="section-heading"><h2 class="section-title" data-translate="education-title">Education & Certifications</h2><p data-translate="education-caption">The foundations behind my work.</p></div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
@@ -191,124 +290,54 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
 
-        <section id="projects" class="projects">
-            <h2 class="section-title" data-translate="projects-title">Projects</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project1-title">Enhancing the Education Ecosystem for Specially Abled Students</h3>
-                    </div>
-                    <div class="project-body">
-                        <p data-translate="project1-desc">A project focused on creating accessible education solutions for students with special needs.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Accessibility</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project2-title">Clean Data in SQL using MySQL Workbench</h3>
-                    </div>
-                    <div class="project-body">
-                        <p data-translate="project2-desc">A Coursera project focused on data cleaning and management techniques using MySQL.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Data Cleaning</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project3-title">AI-Driven Chronic Kidney Disease Prediction System</h3>
-                    </div>
-                    <div class="project-body">
-                        <p data-translate="project3-desc">An AI system that predicts chronic kidney disease and provides virtual doctor consultation.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">AI</span>
-                            <span class="tech-tag">HealthTech</span>
-                            <span class="tech-tag">Java</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project4-title">Chat Application</h3>
-                    </div>
-                    <div class="project-body">
-                        <p data-translate="project4-desc">A real-time chat application developed using Android Studio.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Android</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Real-time</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2 class="section-title" data-translate="contact-title">Get In Touch</h2>
+        <section id="contact" class="contact section-space"><div class="container">
+            <div class="section-eyebrow"><span>05 /</span> <span data-translate="contact-eyebrow">LET'S CONNECT</span></div>
+            <div class="section-heading"><h2 class="section-title" data-translate="contact-title">Get In Touch</h2><p data-translate="contact-caption">Have an idea? Let's build something together.</p></div>
             <div class="contact-container">
-                <div class="contact-info">
+                <div class="contact-info"><h3 data-translate="contact-heading">Good things start with a conversation.</h3><p class="contact-description" data-translate="contact-description">Whether it's a project, an opportunity, or just a hello &mdash; I'd love to hear from you.</p>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <p>95, Tamil Nadu St., Salem City</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>krishnakanth6143@gmail.com</p>
+                        <a href="mailto:krishnakanth6143@gmail.com">krishnakanth6143@gmail.com</a>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/krishnakanth6143" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/krishnakanth-sethuraman/" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/krishna._.kanth/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/krishnakanth6143" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/krishnakanth-sethuraman/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/krishna._.kanth/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm" action="https://formspree.io/f/xwplwvob" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" autocomplete="name" placeholder=" " required>
                             <label for="name" data-translate="contact-name">Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder=" " required>
                             <label for="email" data-translate="contact-email">Email</label>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" placeholder=" " required></textarea>
                             <label for="message" data-translate="contact-message">Message</label>
                         </div>
                         <input type="hidden" name="_subject" value="New contact from Portfolio Website">
-                        <button type="submit" class="btn primary-btn" data-translate="contact-submit">Send Message</button>
+                        <button type="submit" class="btn primary-btn"><span data-translate="contact-submit">Send Message</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                     </form>
                 </div>
             </div>
+        </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Krishnakanth S. <span data-translate="footer-rights">All Rights Reserved</span></p>
-    </footer>
+    <footer><div class="container footer-content"><a class="footer-brand" href="#home">krishnakanth<span>.</span></a><p>&copy; <span id="copyright-year">2026</span> Krishnakanth S. <span data-translate="footer-rights">All Rights Reserved</span></p><a class="back-top" href="#home"><span data-translate="back-top">Back to top</span><i class="fas fa-arrow-up" aria-hidden="true"></i></a></div></footer>
 
-    <script src="js/main.js"></script>
     <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
