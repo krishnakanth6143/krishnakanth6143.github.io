@@ -278,28 +278,6 @@ Object.assign(translations.ta, {
 });
 
 // Apply text without replacing nested icons or other interactive content.
-Object.assign(translations.en, {
-    'craft-code': 'CRAFT & CODE',
-    'value-think': 'Think',
-    'value-build': 'Build',
-    'value-learn': 'Learn',
-    'japanese-learning': 'Learning Japanese, one conversation at a time.'
-});
-Object.assign(translations.ja, {
-    'craft-code': 'ものづくりとコード',
-    'value-think': '考える',
-    'value-build': 'つくる',
-    'value-learn': '学ぶ',
-    'japanese-learning': '一つひとつの会話を通して、日本語を学んでいます。'
-});
-Object.assign(translations.ta, {
-    'craft-code': 'படைப்பும் நிரலாக்கமும்',
-    'value-think': 'சிந்தி',
-    'value-build': 'உருவாக்கு',
-    'value-learn': 'கற்றுக்கொள்',
-    'japanese-learning': 'ஒவ்வொரு உரையாடலிலும் ஜப்பானிய மொழியைக் கற்கிறேன்.'
-});
-
 function applyTranslations(language) {
     const dictionary = translations[language];
     if (!dictionary) return;

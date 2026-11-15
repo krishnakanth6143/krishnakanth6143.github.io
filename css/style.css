@@ -1,17 +1,15 @@
 :root {
     color-scheme: light;
-    --bg: #faf8f3;
-    --surface: #fffdf9;
-    --soft: #f1f0e9;
-    --ink: #272e29;
-    --muted: #6a7168;
-    --green: #486b50;
-    --green-hover: #36563d;
-    --pale: #e8ede2;
-    --line: #e2e3d8;
-    --accent: #b14e3e;
-    --accent-soft: #f4e8df;
-    --header: rgba(250,248,243,.94);
+    --bg: #f8f9f5;
+    --surface: #fff;
+    --soft: #f0f3ed;
+    --ink: #202c27;
+    --muted: #68746d;
+    --green: #356c47;
+    --green-hover: #275537;
+    --pale: #e7eee2;
+    --line: #e0e5dc;
+    --header: rgba(248,249,245,.94);
     --shadow: 0 16px 50px #2437250b;
 }
 
@@ -26,8 +24,6 @@
     --green-hover: #bed9b4;
     --pale: #293c2c;
     --line: #334237;
-    --accent: #e29b89;
-    --accent-soft: #3b2d27;
     --header: rgba(21,29,25,.94);
     --shadow: 0 16px 50px #0002;
 }
@@ -133,11 +129,11 @@ nav {
 }
 
 .logo-mark {
-    background: var(--accent);
+    background: var(--green);
     color: var(--bg);
     width: 34px;
     height: 36px;
-    border-radius: 4px;
+    border-radius: 9px;
     display: grid;
     place-content: center;
     font-family: "Manrope",sans-serif;
@@ -152,7 +148,7 @@ nav {
     bottom: 5px;
     right: 6px;
     font-size: 19px;
-    color: #f6e9d5;
+    color: #d0e1b4;
 }
 
 .logo-name {
@@ -174,9 +170,6 @@ nav {
 }
 
 .nav-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
     font-size: 13px;
     color: var(--muted);
     position: relative;
@@ -261,8 +254,8 @@ nav {
 /* Hero and code illustration */
 .hero {
     position: relative;
-    background-image: linear-gradient(90deg, #85917d06 1px, transparent 1px), linear-gradient(#85917d06 1px, transparent 1px);
-    background-size: 48px 48px;
+    background-image: radial-gradient(var(--line) .75px,transparent .75px);
+    background-size: 22px 22px;
     overflow: clip;
 }
 
@@ -309,12 +302,6 @@ nav {
     letter-spacing: -2.8px;
     font-weight: 800;
     margin-bottom: 25px;
-}
-
-.hero h1 > span:first-child {
-    font-family: 'Noto Serif JP', Georgia, serif;
-    font-weight: 500;
-    letter-spacing: -2.5px;
 }
 
 .text-accent {
@@ -435,18 +422,57 @@ nav {
     position: relative;
     min-width: 0;
     padding-bottom: 32px;
-    padding-top: 42px;
-    padding-right: 26px;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    width: 410px;
+    height: 410px;
+    top: -39px;
+    left: 18px;
+    pointer-events: none;
+}
+
+.orbit-two {
+    width: 490px;
+    height: 490px;
+    top: -79px;
+    left: -22px;
+    border-style: dashed;
+    opacity: .6;
+}
+
+.floating-symbol {
+    position: absolute;
+    font-family: "IBM Plex Mono",monospace;
+    color: var(--green);
+    font-weight: 500;
+}
+
+.symbol-one {
+    right: 0;
+    top: -42px;
+    font-size: 22px;
+    transform: rotate(12deg);
+}
+
+.symbol-two {
+    left: -30px;
+    bottom: 28px;
+    font-size: 19px;
+    transform: rotate(-12deg);
 }
 
 .code-window {
     position: relative;
     background: #202c27;
     border: 1px solid #35463a;
-    border-radius: 8px;
+    border-radius: 12px;
     color: #d5dfd2;
     box-shadow: 0 24px 48px #24372524;
-    transform: rotate(-1deg);
+    transform: rotate(-2deg);
     overflow: hidden;
 }
 
@@ -566,7 +592,7 @@ nav {
     border: 1px solid var(--line);
     border-radius: 10px;
     box-shadow: var(--shadow);
-    transform: rotate(1deg);
+    transform: rotate(3deg);
 }
 
 .craft-icon {
@@ -590,6 +616,12 @@ nav {
     display: block;
     color: var(--muted);
     font-size: 10px;
+}
+
+.badge-spark {
+    color: var(--green);
+    font-size: 23px;
+    padding-left: 9px;
 }
 
 .hero-bottom {
@@ -629,6 +661,11 @@ nav {
     position: absolute;
     left: 4.5px;
     top: 4px;
+}
+
+.hero-note {
+    font-size: 11px;
+    color: var(--muted);
 }
 
 .stack-strip {
@@ -824,7 +861,7 @@ nav {
 
 .skill-category h3 {
     font-size: 13px;
-    margin-bottom: 0;
+    margin-bottom: 24px;
 }
 
 .skill-item {
@@ -1222,21 +1259,18 @@ nav {
     border: 1px solid var(--line);
     border-radius: 10px;
     background: var(--surface);
-    padding: 25px 26px 25px 76px;
+    padding: 25px 26px 25px 44px;
 }
 
 .timeline-dot {
     position: absolute;
     left: 24px;
-    top: 24px;
-    width: 34px;
-    height: 34px;
-    border-radius: 7px;
-    background: var(--pale);
-    color: var(--green);
-    display: grid;
-    place-items: center;
-    font-size: 14px;
+    top: 33px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 4px var(--pale);
 }
 
 .timeline-content h3 {
@@ -1433,228 +1467,6 @@ footer {
 
 .back-top:hover {
     color: var(--green);
-}
-
-/* Japanese editorial details: paper, restrained color, and bilingual chapters. */
-.japan-kicker {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    margin-bottom: 24px;
-    color: var(--accent);
-    font: 9px 'IBM Plex Mono', monospace;
-    letter-spacing: 1.3px;
-}
-
-.japan-kicker > span[lang] {
-    font: 500 12px 'Noto Serif JP', serif;
-    letter-spacing: 3px;
-}
-
-.japan-sun {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex-shrink: 0;
-}
-
-.kicker-divider {
-    width: 23px;
-    height: 1px;
-    background: var(--accent);
-    opacity: .4;
-}
-
-.japan-landscape {
-    position: absolute;
-    inset: -96px -18px 0 -10px;
-    pointer-events: none;
-}
-
-.japan-landscape svg {
-    width: 100%;
-    height: auto;
-    overflow: visible;
-}
-
-.landscape-sun {
-    fill: var(--accent);
-    opacity: .14;
-}
-
-.landscape-ridge, .landscape-horizon {
-    stroke: var(--green);
-    stroke-width: 1;
-    opacity: .25;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.secondary-ridge, .landscape-horizon {
-    opacity: .12;
-}
-
-.japan-side-note {
-    position: absolute;
-    top: -27px;
-    right: -12px;
-    writing-mode: vertical-rl;
-    font: 500 13px 'Noto Serif JP', serif;
-    letter-spacing: 5px;
-    color: var(--green);
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.note-rule {
-    width: 1px;
-    height: 42px;
-    background: var(--accent);
-    opacity: .6;
-}
-
-.landscape-caption {
-    position: absolute;
-    top: 8px;
-    left: 5px;
-    color: var(--muted);
-    font: 10px 'Noto Serif JP', serif;
-    letter-spacing: 2px;
-}
-
-.craft-seal {
-    width: 26px;
-    height: 29px;
-    display: grid;
-    place-items: center;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    border-radius: 3px;
-    font: 500 17px 'Noto Serif JP', serif;
-    margin-left: 8px;
-}
-
-.craft-values {
-    display: flex;
-    gap: 22px;
-    align-items: center;
-}
-
-.craft-values > span {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 10px;
-    color: var(--muted);
-}
-
-.craft-values i {
-    color: var(--green);
-    font-size: 11px;
-}
-
-.craft-values [lang] {
-    font: 11px 'Noto Serif JP', serif;
-}
-
-.value-translation {
-    font-size: 9px;
-    color: var(--muted);
-}
-
-html[lang='ja'] .value-translation,
-html[lang='ja'] .chapter-japanese {
-    display: none;
-}
-
-.chapter-title {
-    display: flex;
-    align-items: baseline;
-    gap: 20px;
-    min-width: 0;
-    flex-wrap: wrap;
-    row-gap: 8px;
-}
-
-.chapter-japanese {
-    font: 400 14px 'Noto Serif JP', serif;
-    letter-spacing: 3px;
-    color: var(--accent);
-    white-space: nowrap;
-}
-
-.section-eyebrow > span:first-child {
-    color: var(--accent);
-}
-
-.skill-heading {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    margin-bottom: 24px;
-}
-
-.skill-icon {
-    display: grid;
-    place-content: center;
-    width: 31px;
-    height: 31px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: var(--soft);
-    color: var(--green);
-    font-size: 12px;
-    flex-shrink: 0;
-}
-
-.art-index {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.art-index i {
-    font-size: 11px;
-}
-
-.japanese-learning {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    border-left: 2px solid var(--accent);
-    background: var(--accent-soft);
-    padding: 14px 16px;
-    margin-top: 24px;
-    border-radius: 0 6px 6px 0;
-}
-
-.learning-icon {
-    color: var(--accent);
-    font-size: 22px;
-}
-
-.japanese-learning [lang] {
-    font: 500 11px 'Noto Serif JP', serif;
-    letter-spacing: 1px;
-}
-
-.japanese-learning p {
-    font-size: 10px;
-    margin-top: 4px;
-    color: var(--muted);
-    line-height: 1.7;
-}
-
-.jlpt-level {
-    color: var(--accent);
-    font: 500 10px 'IBM Plex Mono', monospace;
-    border: 1px solid currentColor;
-    border-radius: 3px;
-    padding: 3px 5px;
-    margin-left: auto;
-    flex-shrink: 0;
 }
 
 /* Fluid layouts, including translated text */
@@ -1888,8 +1700,26 @@ html[lang='ja'] .chapter-japanese {
         right: -7px;
     }
 
+    .orbit {
+        width: 340px;
+        height: 340px;
+        left: calc(50% - 170px);
+        top: -10px;
+    }
+
+    .orbit-two {
+        width: 400px;
+        height: 400px;
+        left: calc(50% - 200px);
+        top: -40px;
+    }
+
     .hero-bottom {
         padding-top: 33px;
+    }
+
+    .hero-note {
+        font-size: 9px;
     }
 
     .hero-bottom>a {
@@ -2103,6 +1933,14 @@ html[lang='ja'] .chapter-japanese {
         gap: 9px;
     }
 
+    .badge-spark {
+        font-size: 20px;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
     .contact-form {
         padding: 23px;
     }
@@ -2151,119 +1989,6 @@ html[lang='ja'] .chapter-japanese {
         font-size: 31px;
     }
 
-}
-
-@media (min-width: 761px) and (max-width: 1150px) {
-    .nav-links a > i {
-        display: none;
-    }
-}
-
-@media (max-width: 760px) {
-    .nav-links a {
-        display: flex;
-        gap: 14px;
-    }
-
-    .nav-links a > i {
-        width: 18px;
-        text-align: center;
-        font-size: 13px;
-        opacity: .8;
-    }
-
-    .hero-visual {
-        margin-top: 24px;
-        padding-right: 18px;
-    }
-
-    .japan-landscape {
-        inset: -82px -5px 0 -8px;
-    }
-
-    .japan-side-note {
-        right: -8px;
-        top: -20px;
-        font-size: 11px;
-    }
-
-    .japan-kicker {
-        margin-bottom: 22px;
-    }
-
-    .hero h1 > span:first-child {
-        letter-spacing: -1.8px;
-    }
-
-    .craft-values {
-        gap: 18px;
-    }
-
-    .craft-values .value-translation {
-        display: none;
-    }
-
-    .skill-heading {
-        gap: 9px;
-    }
-
-    .chapter-japanese {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-}
-
-@media (max-width: 520px) {
-    .hero-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 25px;
-        padding-block: 35px 26px;
-    }
-
-    .craft-values {
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
-        border-top: 1px solid var(--line);
-        padding-top: 20px;
-    }
-
-    .craft-values > span {
-        gap: 8px;
-    }
-
-    .skill-heading {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .landscape-caption {
-        font-size: 9px;
-        letter-spacing: 1px;
-    }
-
-    .japanese-learning {
-        gap: 10px;
-        padding: 13px;
-    }
-
-    .japanese-learning [lang] {
-        font-size: 10px;
-    }
-
-    .timeline-item {
-        padding-left: 65px;
-        padding-right: 20px;
-    }
-
-    .timeline-dot {
-        left: 19px;
-        width: 30px;
-        height: 30px;
-        font-size: 13px;
-    }
 }
 
 @media (prefers-reduced-motion:reduce) {
