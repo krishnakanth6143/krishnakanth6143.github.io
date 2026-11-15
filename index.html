@@ -6,7 +6,7 @@
     <title>Krishnakanth S &mdash; Java & Web Developer</title>
     <meta name="description" content="Krishnakanth S, a Java and web developer building thoughtful applications with Java, MySQL, and modern web technologies. Explore my work, skills, and background.">
     <meta name="theme-color" content="#f8f9f5">
-    <link rel="stylesheet" href="css/style.css?v=ca8ef89e0353">
+    <link rel="stylesheet" href="css/style.css?v=68f86354b851">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -174,6 +174,48 @@
         <section id="projects" class="projects section-space"><div class="container">
             <div class="section-eyebrow"><span>03 /</span> <span data-translate="projects-eyebrow">SELECTED WORK</span><span class="japan-chapter" lang="ja">&#21046;&#20316;&#29289;</span></div>
             <div class="section-heading"><h2 class="section-title" data-translate="projects-title">Projects</h2><p data-translate="projects-caption">Ideas brought to life, one project at a time.</p></div>
+            <article class="current-project" aria-labelledby="billtomo-title">
+                <div class="current-project-content">
+                    <div class="current-project-heading"><span class="current-project-label" data-translate="current-project-label">CURRENTLY BUILDING</span><span class="project-status"><span class="status-dot" aria-hidden="true"></span><span data-translate="billtomo-status">In development</span></span></div>
+                    <h3 id="billtomo-title">BillTomo<span class="current-project-period">.</span></h3>
+                    <p class="current-project-subtitle" data-translate="billtomo-subtitle">Private receipts. Clear splits.</p>
+                    <p class="current-project-description" data-translate="billtomo-description">A privacy-focused Android app I am building to scan English and Japanese receipts offline, track personal spending, and split shared bills with friends. Processing and storage stay on the device, with no accounts, API keys, or backend servers.</p>
+                    <ul class="current-project-features">
+                        <li><i class="fas fa-receipt" aria-hidden="true"></i><div><h4 data-translate="billtomo-feature-scan">Scan, review, save</h4><p data-translate="billtomo-feature-scan-desc">Bundled offline OCR, camera and photo import, and editable receipt details before saving.</p></div></li>
+                        <li><i class="fas fa-user-group" aria-hidden="true"></i><div><h4 data-translate="billtomo-feature-split">Your share, tracked correctly</h4><p data-translate="billtomo-feature-split-desc">Equal or exact splits with up to 20 friends, payer selection, and repayment tracking.</p></div></li>
+                        <li><i class="fas fa-chart-simple" aria-hidden="true"></i><div><h4 data-translate="billtomo-feature-insights">A clearer view of spending</h4><p data-translate="billtomo-feature-insights-desc">Monthly budgets, category insights, six-month charts, and CSV export in five currencies.</p></div></li>
+                    </ul>
+                    <div class="project-tech"><span class="tech-tag">Kotlin</span><span class="tech-tag">Jetpack Compose</span><span class="tech-tag">Material 3</span><span class="tech-tag">Google ML Kit</span><span class="tech-tag">Coroutines</span></div>
+                    <p class="current-project-meta"><span>v0.6.0</span><span>Android 8.0+</span><span data-translate="billtomo-english-ui">English interface</span></p>
+                    <a href="#contact" class="current-project-link"><span data-translate="billtomo-contact">Ask me about BillTomo</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="current-project-art" aria-hidden="true">
+                    <span class="current-art-label">BillTomo / ANDROID</span>
+                    <div class="billtomo-phone">
+                        <div class="phone-camera"></div>
+                        <div class="phone-header"><strong>BillTomo<span>.</span></strong><span>JPY <i class="fas fa-chevron-down"></i></span></div>
+                        <div class="phone-spending"><span>MY SPENDING</span><strong>&#165;12,400</strong><div><span>This month</span><i class="fas fa-arrow-trend-up"></i></div><span class="phone-budget"><span></span></span></div>
+                        <div class="phone-balances"><div><span><i class="fas fa-arrow-down"></i> You are owed</span><strong>&#165;2,400</strong></div><div><span><i class="fas fa-arrow-up"></i> You owe</span><strong>&#165;800</strong></div></div>
+                        <div class="phone-receipts-title"><strong>Recent receipts</strong><span>View all</span></div>
+                        <div class="phone-receipt"><span><i class="fas fa-mug-hot"></i></span><div><strong>Coffee shop</strong><span>Food &amp; drink</span></div><strong>&#165;600</strong></div>
+                        <div class="phone-receipt"><span><i class="fas fa-basket-shopping"></i></span><div><strong>Groceries</strong><span>Shopping</span></div><strong>&#165;2,100</strong></div>
+                        <div class="phone-scan"><i class="fas fa-camera"></i> Scan receipt</div>
+                        <div class="phone-navigation"><span><i class="fas fa-house"></i>Home</span><span><i class="fas fa-receipt"></i>Receipts</span><span><i class="fas fa-user-group"></i>Splits</span><span><i class="fas fa-chart-simple"></i>Insights</span></div>
+                    </div>
+                    <span class="current-art-note" data-translate="billtomo-illustration">Interface illustration / sample amounts</span>
+                </div>
+                <details class="current-project-details">
+                    <summary><span data-translate="billtomo-details">Technical details &amp; current scope</span><i class="fas fa-chevron-down" aria-hidden="true"></i></summary>
+                    <div class="project-details-grid">
+                        <div><h4 data-translate="billtomo-detail-ocr-title">Offline receipt intelligence</h4><p data-translate="billtomo-detail-ocr">Bundled ML Kit Latin and Japanese models recognize receipt text on the phone. Local rules extract merchants, dates, totals, currencies, and items. Uncertain totals are left for manual review; scanning never saves a receipt automatically.</p></div>
+                        <div><h4 data-translate="billtomo-detail-money-title">Spending and split rules</h4><p data-translate="billtomo-detail-money">Only your share of a shared receipt counts as personal spending. Equal splits preserve the exact total after rounding, and repayments reduce balances without creating another expense. JPY uses whole yen; other supported currencies use minor units.</p></div>
+                        <div><h4 data-translate="billtomo-detail-architecture-title">A local-first architecture</h4><p data-translate="billtomo-detail-architecture">Jetpack Compose screens connect through AppViewModel to receipt-scanning and domain rules, then to ExpenseStore. Coroutines support app work, and versioned JSON is saved using atomic file replacement. Photos remain in app-private storage; no internet permission is included.</p></div>
+                        <div><h4 data-translate="billtomo-detail-insights-title">Budgets, reports, and currencies</h4><p data-translate="billtomo-detail-insights">Separate budgets and reports support INR, USD, JPY, EUR, and GBP. Currency selection filters receipts rather than converting amounts. Insights include category breakdowns, monthly comparisons, six-month charts, and CSV summaries with spreadsheet-formula protection.</p></div>
+                        <div><h4 data-translate="billtomo-detail-testing-title">Testing and validation</h4><p data-translate="billtomo-detail-testing">JUnit tests cover parsing, currency formatting, split rounding, spending history, and CSV generation. AndroidX device tests cover real English and Japanese OCR, storage migrations, settings, receipt review, and complete interface flows.</p></div>
+                        <div><h4 data-translate="billtomo-detail-status-title">In active development</h4><p data-translate="billtomo-detail-status">The interface is currently English-only. Cloud sync, full backup and restore, currency conversion, and automatic payments are not included. Uninstalling removes saved data; CSV export is not a full backup. Release signing and Play Store privacy documentation remain to be completed.</p></div>
+                    </div>
+                </details>
+            </article>
             <div class="projects-container">
                 <article class="project-card">
                     <div class="project-art art-education" aria-hidden="true"><span class="art-index">01 / EDUCATION</span><div class="edu-illustration"><div class="book-page"><i class="fas fa-book-open"></i><span></span><span></span><span></span></div><span class="education-orbit">a<span>+</span></span><span class="small-spark">&#10022;</span></div><span class="art-caption">Learning without limits.</span></div>
@@ -337,7 +379,7 @@
 
     <footer><div class="container footer-content"><a class="footer-brand" href="#home">krishnakanth<span>.</span></a><p>&copy; <span id="copyright-year">2026</span> Krishnakanth S. <span data-translate="footer-rights">All Rights Reserved</span></p><a class="back-top" href="#home"><span data-translate="back-top">Back to top</span><i class="fas fa-arrow-up" aria-hidden="true"></i></a></div></footer>
 
-    <script src="js/translations.js?v=113ba4a8acb2"></script>
+    <script src="js/translations.js?v=2b6a97ebbb2a"></script>
     <script src="js/main.js?v=889e561e3d6d"></script>
 </body>
 </html>
