@@ -1469,6 +1469,110 @@ footer {
     color: var(--green);
 }
 
+/* Small Japanese craft references within the original green design. */
+.eyebrow {
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+.japan-greeting {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding-right: 12px;
+    border-right: 1px solid var(--line);
+    font: 500 11px 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+    letter-spacing: 1px;
+}
+
+.japan-sun {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #b95143;
+    flex-shrink: 0;
+}
+
+.japan-motif {
+    display: block;
+    width: 40px;
+    height: 34px;
+}
+
+.japan-motif svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    stroke-width: 1.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.japan-motif .motif-sun {
+    fill: #b95143;
+    stroke: none;
+    opacity: .8;
+}
+
+.japan-motif.symbol-one {
+    top: -49px;
+    right: 6px;
+    transform: rotate(7deg);
+}
+
+.japan-motif.symbol-two {
+    left: -6px;
+    bottom: -11px;
+    transform: rotate(-7deg);
+}
+
+.japan-seal {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 28px;
+    margin-left: 7px;
+    color: var(--green);
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    font: 500 17px 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    flex-shrink: 0;
+}
+
+.japan-motto {
+    font: 11px 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+    letter-spacing: 1.5px;
+    color: var(--green);
+}
+
+.motto-divider {
+    margin-inline: 13px;
+    color: var(--line);
+}
+
+.section-eyebrow {
+    flex-wrap: wrap;
+    row-gap: 8px;
+}
+
+.japan-chapter {
+    color: var(--muted);
+    font: 10px 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+    letter-spacing: 2px;
+    border-left: 1px solid var(--line);
+    padding-left: 12px;
+    margin-left: 3px;
+}
+
+html[lang='ja'] .japan-greeting,
+html[lang='ja'] .japan-chapter,
+html[lang='ja'] .japan-motto,
+html[lang='ja'] .motto-divider {
+    display: none;
+}
+
 /* Fluid layouts, including translated text */
 @media (min-width:1500px) {
     .hero-layout {
